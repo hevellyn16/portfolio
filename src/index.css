@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* src/index.css */
+
+@keyframes orbit-horizontal-organic {
+  0% {
+    /* Começa na esquerda, atrás, pequeno */
+    transform: translateX(-120%) translateY(-20%) scale(0.8) rotate(-10deg);
+    z-index: 0; /* Atrás da foto (que será z-10) */
+    opacity: 0.6;
+  }
+  45% {
+    /* Chegando na frente, no meio, grande */
+    z-index: 20; /* Pula para frente */
+  }
+  50% {
+    /* Centro exato na frente */
+    transform: translateX(0%) translateY(10%) scale(1.3) rotate(5deg);
+    opacity: 1;
+  }
+  55% {
+    /* Começando a ir para trás */
+    z-index: 20; /* Ainda na frente */
+  }
+  95% {
+      z-index: 0; /* Volta para trás */
+  }
+  100% {
+    /* Termina na direita, atrás, pequeno */
+    transform: translateX(120%) translateY(-20%) scale(0.8) rotate(10deg);
+    z-index: 0;
+    opacity: 0.6;
+  }
+}
+
+/* Uma classe utilitária para aplicar a animação */
+.animate-orbit-organic {
+  /* Nome | Duração | Curva de velocidade | Direção | Repetição */
+  animation: orbit-horizontal-organic 8s ease-in-out infinite alternate;
+  /* 'alternate' faz ela ir e voltar, criando um movimento de pêndulo fluido */
+}
