@@ -9,6 +9,7 @@ const projectsData = [
     category: "Design",
     shortCategory: "CineSol",
     tags: ["UI/UX Design", "Projeto Pessoal"],
+    // TEMA: Rosa / Rose
     colorFrom: "from-pink-500", 
     colorTo: "to-rose-500",
     textColor: "text-pink-600",
@@ -24,6 +25,7 @@ const projectsData = [
     category: "Team",
     shortCategory: "T. Caixa",
     tags: ["UI Design", "Hero Section"],
+    // TEMA: Roxo / Violeta
     colorFrom: "from-violet-500",
     colorTo: "to-purple-500",
     textColor: "text-purple-600",
@@ -32,6 +34,22 @@ const projectsData = [
     link: "https://terceiracaixa.com.br/",
     linkLabel: "Ver Site",
     imageBg: "bg-[#F25C05]"
+  },
+  {
+    id: 3,
+    title: "IBBS",
+    category: "Landing Page",
+    shortCategory: "IBBS",
+    tags: ["UI/UX Design", "ReactJS", "TailwindCSS", "Figma", "Frontend"],
+    // TEMA: Azul / Ciano (MUDANÇA AQUI)
+    colorFrom: "from-blue-500",
+    colorTo: "to-cyan-500",       // Gradiente azul para ciano fica bem moderno
+    textColor: "text-blue-600",
+    bgColor: "bg-blue-50",
+    description: "Desenvolvi a nova landing page institucional da Igreja Batista Betel, utilizando React e Tailwind CSS. O projeto focou em modernizar a presença digital da comunidade com um design mobile-first, layout responsivo e hierarquia visual clara para facilitar o acesso à agenda e localização.",
+    link: "https://igrejabatistabetel.vercel.app/",
+    linkLabel: "Ver Site",
+    imageBg: "bg-[#263A4F]" // Usei o Azul Petróleo oficial da marca (do botão que você fez)
   }
 ];
 
@@ -106,7 +124,7 @@ export default function Projects() {
                     >✕</button>
 
                     <h2 className="text-[8rem] font-bold text-white/10 absolute select-none leading-none">
-                      {project.id === 1 ? '01' : '02'}
+                      {project.id === 1 ? '01' : project.id === 2 ?  '02' : '03'}
                     </h2>
                     <span className="text-white text-2xl md:text-3xl font-bold z-10 relative drop-shadow-md text-center px-4">
                       {project.title}
