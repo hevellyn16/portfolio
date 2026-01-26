@@ -23,7 +23,7 @@ const projectsData = [
     title: "Terceira Caixa",
     category: "Team",
     shortCategory: "T. Caixa",
-    tags: ["UI Design", "Hero Section", "Frontend"],
+    tags: ["UI Design", "Hero Section"],
     colorFrom: "from-violet-500",
     colorTo: "to-purple-500",
     textColor: "text-purple-600",
