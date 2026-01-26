@@ -2,7 +2,7 @@ export default function Contact() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="w-full py-16 bg-white border-t border-gray-100">
+    <footer id="contact" className="poppins-regular w-full py-16 bg-white border-t border-gray-100">
       <div className="max-w-4xl mx-auto px-4 text-center">
         
         {/* Título Chamativo */}

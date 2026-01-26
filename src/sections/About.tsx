@@ -8,7 +8,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="w-full py-24 bg-white text-gray-800 px-4 overflow-hidden">
+    <section id="about" className="poppins-regular w-full py-24 bg-white text-gray-800 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
         
         {/* === LADO ESQUERDO: A FOTO === */}
@@ -48,7 +48,7 @@ export default function About() {
           
           <div className="text-gray-600 text-lg leading-relaxed space-y-4 mb-8">
             <p>
-              Olá! Sou designer e desenvolvedora baseada em <strong className="text-gray-900">Sobral, Ceará</strong>. 
+              Olá! Sou designer e desenvolvedora e venho de <strong className="text-gray-900">Sobral, Ceará</strong>. 
             </p>
             <p>
               Minha jornada começou no Marketing (onde aprendi a entender o que as pessoas querem), 

@@ -44,7 +44,7 @@ const servicesData = [
 
 export default function Services() {
   return (
-    <section id="services" className="w-full py-24 bg-gray-50 text-gray-800 px-4">
+    <section id="services" className="poppins-regular w-full py-24 bg-gray-50 text-gray-800 px-4">
       <div className="max-w-6xl mx-auto">
         
         {/* CABEÇALHO DA SEÇÃO */}
