@@ -61,7 +61,7 @@ export default function Navbar() {
             <button
               key={item.name}
               onClick={() => scrollToSection(item.id)}
-              className="text-sm font-medium text-white/90   hover:text-white transition-all hover:bg-white/10 px-4 py-2 rounded-full poppins-regular"
+              className="text-sm cursor-pointer font-medium text-white/90   hover:text-white transition-all hover:bg-white/10 px-4 py-2 rounded-full poppins-regular"
             >
               {item.name}
             </button>
