@@ -56,6 +56,7 @@ const projectsData = [
 export default function Projects() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const { displayText, elementRef } = useTypewriter("Meus Projetos");
+  const [ expandTags, setExpandTags ] = useState(false);
 
   const handleCardClick = (id: number) => {
     setActiveId(activeId === id ? null : id);
@@ -94,9 +95,6 @@ export default function Projects() {
               
               {/* MODO 1: BARRA LATERAL (INATIVO) */}
               <div className={`absolute inset-0 bg-linear-to-b ${project.colorFrom} ${project.colorTo} flex items-center justify-center transition-opacity duration-500 ${isInactive ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                 {/* --- AQUI ESTÁ A CORREÇÃO --- */}
-                 {/* Mudei 'rotate-90' para 'md:rotate-90'. */}
-                 {/* Adicionei 'whitespace-nowrap' para garantir que o texto fique em uma linha só. */}
                  <span className="text-white font-bold text-xl tracking-widest uppercase md:rotate-90 whitespace-nowrap">
                    {project.shortCategory}
                  </span>
@@ -134,13 +132,14 @@ export default function Projects() {
                 {/* Lado do Texto */}
                 <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center bg-gray-50 text-left h-full overflow-y-auto">
                   
-                  <div className="flex gap-2 mb-4 flex-wrap">
-                    {project.tags.map(tag => (
-                      <span key={tag} className="px-3 py-1 text-xs font-bold rounded-full bg-gray-200 text-gray-600 shrink-0 whitespace-nowrap">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex gap-2 mb-4 flex-wrap mt-12"> 
+                  {project.tags.map(tag => (
+                    <span key={tag} className="px-3 py-1 text-xs font-bold rounded-full bg-gray-200 text-gray-600 shrink-0 whitespace-nowrap">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
 
                   <h2 className={`text-2xl md:text-4xl font-bold mb-4 ${project.textColor}`}>
                     {project.title}
