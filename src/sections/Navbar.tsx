@@ -52,7 +52,7 @@ export default function Navbar() {
             className="text-2xl font-bold text-white tracking-tighter cursor-pointer z-50 hover:text-purple-300 transition-colors"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          Hevellyn<span className="text-purple-500">.</span>
+          Hevellyn{scrolled ? <span className="text-purple-500">.</span> : <span className="text-fuchsia-400">.</span>}
         </div>
 
         {/* 2. MENU DESKTOP */}
@@ -61,7 +61,7 @@ export default function Navbar() {
             <button
               key={item.name}
               onClick={() => scrollToSection(item.id)}
-              className="text-sm font-medium text-white/90 hover:text-white transition-all hover:bg-white/10 px-4 py-2 rounded-full"
+              className="text-sm font-medium text-white/90   hover:text-white transition-all hover:bg-white/10 px-4 py-2 rounded-full poppins-regular"
             >
               {item.name}
             </button>

@@ -1,3 +1,5 @@
+import { EncryptedText } from "@/components/ui/encrypted-text";
+
 export function Hero() {
     return (
         <>
@@ -5,9 +7,8 @@ export function Hero() {
                 <div className="-translate-y-10 container mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-10">
                     
                     {/* --- LADO ESQUERDO: TEXTO --- */}
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left z-20">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight orbitron-regular text-shadow-amber-500">Transformando pixels em experiências.
-                        </h1>
+                    <div className="container mx-auto px-24 flex flex-col items-center md:items-start text-center md:text-left z-20">
+                        <EncryptedText className="text-4xl md:text-6xl font-bold mb-4 leading-tight orbitron-regular text-shadow-amber-500" text={"Transformando pixels em experiências."}/>
                         <p className="text-lg md:text-xl mb-8 max-w-lg poppins-regular text-white/90">
                         Onde a precisão da engenharia encontra a beleza do design.
                         </p>
