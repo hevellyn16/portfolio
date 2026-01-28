@@ -56,7 +56,7 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {servicesData.map((service) => (
             // 2. CardContainer
-            <CardContainer key={service.id} className="inter-var w-full h-full">
+            <CardContainer key={service.id} containerClassName="w-full h-full py-2 md:py-20" className="inter-var">
               
               {/* 3. CardBody - CORREÇÕES APLICADAS AQUI 👇 */}
               {/* Adicionei 'flex flex-col' e 'h-full' (ou min-h) para forçar altura igual */}
