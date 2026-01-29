@@ -40,13 +40,13 @@ const projectsData = [
     title: "IBBS",
     category: "Landing Page",
     shortCategory: "IBBS",
-    tags: ["UI/UX Design", "ReactJS", "TailwindCSS", "Figma", "Frontend"],
+    tags: ["UI/UX Design", "ReactJS", "TailwindCSS", "Figma", "Fullstack", "Supabase"],
     // TEMA: Azul / Ciano (MUDANÇA AQUI)
     colorFrom: "from-blue-500",
     colorTo: "to-cyan-500",       // Gradiente azul para ciano fica bem moderno
     textColor: "text-blue-600",
     bgColor: "bg-blue-50",
-    description: "Desenvolvi a nova landing page institucional da Igreja Batista Betel, utilizando React e Tailwind CSS. O projeto focou em modernizar a presença digital da comunidade com um design mobile-first, layout responsivo e hierarquia visual clara para facilitar o acesso à agenda e localização.",
+    description: "Desenvolvimento Fullstack de uma plataforma institucional e administrativa. O projeto inclui uma Landing Page de alta performance e um Dashboard Financeiro protegido por autenticação. Utilizei React e Supabase para criar um sistema seguro de gestão de arquivos (PDFs), com rotas privadas e interface otimizada para a administração da igreja.",
     link: "https://igrejabatistabetel.vercel.app/",
     linkLabel: "Ver Site",
     imageBg: "bg-[#263A4F]" // Usei o Azul Petróleo oficial da marca (do botão que você fez)
@@ -56,7 +56,6 @@ const projectsData = [
 export default function Projects() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const { displayText, elementRef } = useTypewriter("Meus Projetos");
-  const [ expandTags, setExpandTags ] = useState(false);
 
   const handleCardClick = (id: number) => {
     setActiveId(activeId === id ? null : id);
@@ -130,7 +129,7 @@ export default function Projects() {
                 </div>
 
                 {/* Lado do Texto */}
-                <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center bg-gray-50 text-left h-full overflow-y-auto">
+                <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col pt-2 bg-gray-50 text-left h-full overflow-y-auto">
                   
                 <div className="flex gap-2 mb-4 flex-wrap mt-12"> 
                   {project.tags.map(tag => (
